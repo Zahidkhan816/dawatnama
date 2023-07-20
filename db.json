@@ -1,0 +1,99 @@
+{
+  "posts": [
+    {
+      "name": "1",
+      "address": "1b ",
+      "id": 8,
+      "serviceType": "Food",
+      "phone": "1",
+      "staff": "Female",
+      "price": "111",
+      "parkingSpace": "1",
+      "foodItems": [],
+      "description": "11"
+    },
+    {
+      "name": "zs",
+      "address": "sss",
+      "id": 9,
+      "serviceType": "Meraige Hall",
+      "staff": "Male",
+      "price": "sss",
+      "parkingSpace": "sss",
+      "foodItems": []
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "serviceType": "Meraige Hall",
+      "price": "",
+      "description": "",
+      "parkingSpace": "",
+      "staff": "",
+      "foodItems": [],
+      "id": 10
+    },
+    {
+      "name": "",
+      "address": "",
+      "id": 11,
+      "serviceType": "Photography",
+      "phone": "1234",
+      "staff": "",
+      "price": "",
+      "parkingSpace": ""
+    },
+    {
+      "name": "Zahid khan",
+      "address": "lahore ",
+      "phone": "+923494927404",
+      "serviceType": "Photography",
+      "price": "1111111",
+      "description": "skjkdhaidha",
+      "parkingSpace": "",
+      "staff": "",
+      "foodItems": [],
+      "id": 12
+    },
+    {
+      "name": "zahid khan",
+      "address": "lajorte ",
+      "phone": "",
+      "serviceType": "Meraige Hall",
+      "price": "",
+      "description": "kamdkand",
+      "parkingSpace": "",
+      "sittingCapacity": "",
+      "staff": "",
+      "foodItems": [],
+      "id": 13
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "serviceType": "Meraige Hall",
+      "price": "",
+      "description": "",
+      "parkingSpace": "",
+      "sittingCapacity": "",
+      "staff": "",
+      "foodItems": [],
+      "id": 14
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "serviceType": "Meraige Hall",
+      "price": "",
+      "description": "",
+      "parkingSpace": "",
+      "sittingCapacity": "",
+      "staff": "",
+      "foodItems": [],
+      "id": 15
+    }
+  ]
+}
