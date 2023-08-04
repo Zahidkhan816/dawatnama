@@ -23,51 +23,19 @@
       "foodItems": []
     },
     {
-      "name": "",
-      "address": "",
-      "phone": "",
-      "serviceType": "Meraige Hall",
-      "price": "",
-      "description": "",
-      "parkingSpace": "",
-      "staff": "",
-      "foodItems": [],
-      "id": 10
-    },
-    {
-      "name": "",
-      "address": "",
-      "id": 11,
-      "serviceType": "Photography",
-      "phone": "1234",
-      "staff": "",
-      "price": "",
-      "parkingSpace": ""
-    },
-    {
-      "name": "Zahid khan",
-      "address": "lahore ",
-      "phone": "+923494927404",
-      "serviceType": "Photography",
-      "price": "1111111",
-      "description": "skjkdhaidha",
-      "parkingSpace": "",
-      "staff": "",
-      "foodItems": [],
-      "id": 12
-    },
-    {
       "name": "zahid khan",
-      "address": "lajorte ",
-      "phone": "",
+      "address": "ksndksdns",
+      "phone": "sdknasdkna",
       "serviceType": "Meraige Hall",
-      "price": "",
-      "description": "kamdkand",
+      "price": "adakdna",
+      "description": "amkan",
       "parkingSpace": "",
-      "sittingCapacity": "",
-      "staff": "",
-      "foodItems": [],
-      "id": 13
+      "sittingCapacity": "-18",
+      "staff": "Female",
+      "foodItems": [
+        "kadkad"
+      ],
+      "id": 11
     },
     {
       "name": "",
@@ -76,24 +44,10 @@
       "serviceType": "Meraige Hall",
       "price": "",
       "description": "",
-      "parkingSpace": "",
+      "parkingSpace": "11111111109",
       "sittingCapacity": "",
       "staff": "",
-      "foodItems": [],
-      "id": 14
-    },
-    {
-      "name": "",
-      "address": "",
-      "phone": "",
-      "serviceType": "Meraige Hall",
-      "price": "",
-      "description": "",
-      "parkingSpace": "",
-      "sittingCapacity": "",
-      "staff": "",
-      "foodItems": [],
-      "id": 15
+      "id": 12
     }
   ]
 }
