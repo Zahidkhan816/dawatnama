@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import logo from '../Images/logopng.png'
 const Navbar = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" href="#">Logo</Link>
+                    <Link className="navbar-brand" to="home">
+                        <img src={logo} alt="" style={{width:"3rem" , height:"3rem" , borderRadius:"10rem"}} />
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
                     </button>
@@ -15,11 +18,11 @@ const Navbar = () => {
                                 <Link className="nav-link active" to="home" aria-current="page" href="#">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="form" href="#">Form</Link>
+                                <Link className="nav-link" to="Compare" href="#">Cities</Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navba  rDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+                                    All services
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><Link className="dropdown-item" to="MeraigHall" href="#">Merrage Halls</Link></li>
@@ -28,7 +31,7 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
+                                <Link className="nav-link" to="form" href="#">Form</Link>
                             </li>
                         </ul>
                         <form className="d-flex">

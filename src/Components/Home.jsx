@@ -51,6 +51,7 @@ const Home = () => {
 
   const handleModalOpen = (item) => {
     setSelectedItem(item);
+    console.log("im model and open nme")
   };
 
   const handleModalClose = () => {
@@ -74,8 +75,7 @@ const Home = () => {
                 {item.name}
               </h2>
               <h5 className="card-title">Service: {item.serviceType}</h5>
-              <p>Price: {item.price}Pkr</p>
-              <p className="card-text">
+              {/* <p className="card-text">
                 Description:
                 {expandedItems.includes(index)
                   ? item.description
@@ -86,11 +86,13 @@ const Home = () => {
                       {expandedItems.includes(index) ? 'Show Less' : 'Learn More'}
                     </button>
                   )}
-              </p>
+              </p> */}
+              <p className="card-text">City: {item.city}</p>
+              <p>Price: {item.price}Pkr</p>
               <p className="card-text">Phone: {item.phone}</p>
               <p className="card-text">ParkingSpace: {item.parkingSpace}</p>
               <p className="card-text">Staff: {item.staff}</p>
-              <p className="card-text">
+              {/* <p className="card-text">
                 Address:
                 {expandedItems.includes(index)
                   ? item.address
@@ -100,7 +102,7 @@ const Home = () => {
                     {expandedItems.includes(index) ? 'Show Less' : 'Learn More'}
                   </button>
                 )}
-              </p>
+              </p> */}
               <button
                 type="button"
                 className="btn btn-primary"
@@ -108,7 +110,7 @@ const Home = () => {
                 data-bs-target="#exampleModal"
                 onClick={() => handleModalOpen(item)}
               >
-                Launch demo modal
+                Check Details
               </button>
             </div>
           </div>
@@ -121,7 +123,7 @@ const Home = () => {
             <div className="modal-content">
               <div className="modal-header">
                 <h1 className="modal-title fs-5" id="exampleModalLabel">
-                  Modal title
+                Service Details
                 </h1>
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleModalClose} />
               </div>

@@ -226,3 +226,54 @@ body {
 .purchase:hover {
   background-color: rgb(222, 157, 54);
 }
+.city-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.city-button {
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.city-button.active {
+  background-color: #008080;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.price-range-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.price-range-container label {
+  margin: 0 10px;
+}
+
+.price-range-container input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 5px;
+}

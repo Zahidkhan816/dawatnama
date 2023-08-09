@@ -1,53 +1,16 @@
 {
   "posts": [
     {
-      "name": "1",
-      "address": "1b ",
-      "id": 8,
-      "serviceType": "Food",
-      "phone": "1",
-      "staff": "Female",
-      "price": "111",
-      "parkingSpace": "1",
-      "foodItems": [],
-      "description": "11"
-    },
-    {
-      "name": "zs",
-      "address": "sss",
-      "id": 9,
-      "serviceType": "Meraige Hall",
-      "staff": "Male",
-      "price": "sss",
-      "parkingSpace": "sss",
-      "foodItems": []
-    },
-    {
       "name": "zahid khan",
-      "address": "ksndksdns",
-      "phone": "sdknasdkna",
-      "serviceType": "Meraige Hall",
-      "price": "adakdna",
-      "description": "amkan",
-      "parkingSpace": "",
-      "sittingCapacity": "-18",
-      "staff": "Female",
-      "foodItems": [
-        "kadkad"
-      ],
-      "id": 11
-    },
-    {
-      "name": "",
       "address": "",
-      "phone": "",
+      "city": "Lahore",
+      "id": 1,
       "serviceType": "Meraige Hall",
-      "price": "",
-      "description": "",
-      "parkingSpace": "11111111109",
-      "sittingCapacity": "",
-      "staff": "",
-      "id": 12
+      "phone": "+923494927404",
+      "staff": "Female",
+      "price": "1111111",
+      "parkingSpace": "1212312",
+      "foodItems": []
     }
   ]
 }

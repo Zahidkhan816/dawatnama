@@ -6,10 +6,13 @@ const Form = () => {
   const [getList, setGetList] = useState([])
   const [serviceTypeOptions] = useState(["Meraige Hall", "Food", "Photography"]);
   const [staffOptions] = useState(["Male", "Female"]);
+  const cityOptions = ["Lahore", "Islamabad", "Karachi"];
+
   const [data, setData] = useState({
     name: "",
     address: "",
     phone: "",
+    city: "",
     serviceType: "Meraige Hall",
     price: "",
     description: "",
@@ -22,6 +25,7 @@ const Form = () => {
     id: "",
     name: "",
     address: "",
+    city: "",
     phone: "",
     serviceType: "",
     price: "",
@@ -41,6 +45,7 @@ const Form = () => {
           {
             name: "",
             address: "",
+            city: "",
             phone: "",
             serviceType: "",
             price: "",
@@ -124,58 +129,65 @@ const Form = () => {
       <div>
         <ToastContainer />
         <h3 className='Heading'>Admin Data</h3>
-        <div className='Inputs-table  '>
-          <div className='row'>
-            <div className="col-lg-6 inputs">
-              <label htmlFor="exampleInputEmail1" className="form-label">Name:</label>
-              <input className="form-control" onChange={(e) => setData({ ...data, name: e.target.value })} value={data.name} type="text" name="" id="exampleInputPassword1" />
-              {/* <textarea
+        <div className='Inputs-table '>
+          <div className="col-lg-4 inputs">
+            <label htmlFor="exampleInputEmail1" className="form-label">Name:</label>
+            {/* <input className="form-control" onChange={(e) => setData({ ...data, name: e.target.value })} value={data.name} type="text" name="" id="exampleInputPassword1" /> */}
+            <textarea
               value={data.name}
               className="form-control"
               id="exampleInputPassword1"
               onChange={(e) => setData({ ...data, name: e.target.value })}
-            ></textarea> */}
-            </div>
-            <div className="col-lg-6 inputs">
-              <label htmlFor="exampleInputPassword1" className="form-label">Address:</label>
-              <input className="form-control" value={data.address} onChange={(e) => setData({ ...data, address: e.target.value })} type="text" name="" id="" />
-              {/* <textarea
+            ></textarea>
+          </div>
+          <div className="col-lg-4 inputs">
+            <label htmlFor="exampleInputPassword1" className="form-label">Address:</label>
+            {/* <input className="form-control" value={data.address} onChange={(e) => setData({ ...data, address: e.target.value })} type="text" name="" id="" /> */}
+            <textarea
               value={data.address}
               className="form-control"
               id="exampleInputPassword1"
               onChange={(e) => setData({ ...data, address: e.target.value })}
               placeholder='Address '
-            ></textarea> */}
-            </div>
+            ></textarea>
           </div>
-
-          <div className='row'>
-            <div className="col-lg-6 inputs">
-              <label htmlFor="exampleInputPassword1" className="form-label">Phone</label>
-              <input
-                value={data.phone}
-                className="form-control"
-                id="exampleInputPassword1"
-                onChange={(e) => setData({ ...data, phone: e.target.value })}
-                placeholder='Phone Number'
-              ></input>
-            </div>
-            <div className="col-lg-6 inputs">
-              <label htmlFor="exampleInputPassword1" className="form-label">Service Type:</label>
-              <select
-                className="form-control"
-                value={data.serviceType}
-                onChange={handleServiceTypeChange}
-              >
-                {serviceTypeOptions.map((option) => (
-                  <option key={option} value={option}>{option}</option>
-                ))}
-              </select>
-            </div>
+          <div className="col-lg-4 inputs">
+            <label htmlFor="exampleInputCity" className="form-label">City:</label>
+            <select
+              id="exampleInputCity"
+              className="form-control"
+              value={data.city}
+              onChange={(e) => setData({ ...data, city: e.target.value })}
+            >
+              {cityOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
           </div>
-          <div className='row'>
-      {data.serviceType === "Food" && (
-            <div className="col-lg-6 inputs">
+          <div className="col-lg-4 inputs">
+            <label htmlFor="exampleInputPassword1" className="form-label">Phone</label>
+            <input
+              value={data.phone}
+              className="form-control"
+              id="exampleInputPassword1"
+              onChange={(e) => setData({ ...data, phone: e.target.value })}
+              placeholder='Phone Number'
+            ></input>
+          </div>
+          <div className="col-lg-4 inputs">
+            <label htmlFor="exampleInputPassword1" className="form-label">Service Type:</label>
+            <select
+              className="form-control"
+              value={data.serviceType}
+              onChange={handleServiceTypeChange}
+            >
+              {serviceTypeOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
+          </div>
+          {data.serviceType === "Food" && (
+            <div className="col-lg-4 inputs">
               <label htmlFor="foodItemsInput" className="form-label">Food Items:</label>
               <input value={data.foodItems.join("\n")}
                 className="form-control"
@@ -183,17 +195,15 @@ const Form = () => {
                 onChange={handleFoodItemsChange} type="text" />
             </div>
           )}
-          <div className="col-lg-6 inputs">
-            <label htmlFor="exampleInputPassword1" className="form-label">Price:</label>
-            <input type="text" 
+          <div className="col-lg-4 inputs">
+            <label htmlFor="exampleInputPassword1" className="form-label">Price (Per-Head):</label>
+            <input type="number"
               value={data.price}
               className="form-control"
               id="exampleInputPassword1"
               onChange={(e) => setData({ ...data, price: e.target.value })}
             />
           </div>
-          </div>
-    
           <div className="col-lg-4 inputs">
             <label htmlFor="exampleInputPassword1" className="form-label">Description:</label>
             <textarea
@@ -251,6 +261,7 @@ const Form = () => {
                 <tr >
                   <th>Name</th>
                   <th>Address</th>
+                  <th>City</th>
                   <th>Phone</th>
                   <th>Serive</th>
                   <th>Price</th>
@@ -266,6 +277,7 @@ const Form = () => {
                       <tr key={index}>
                         <td> {items.name}</td>
                         <td>{items.address}</td>
+                        <td>{items.city}</td>
                         <td>{items.phone}</td>
                         <td>{items.serviceType}</td>
                         <td>{items.price}</td>
@@ -276,6 +288,7 @@ const Form = () => {
                           onClick={() => setUpdaTEData({
                             name: items.name,
                             address: items.address,
+                            city: items.city,
                             id: items.id,
                             serviceType: items.serviceType,
                             phone: items.phone,
@@ -316,6 +329,19 @@ const Form = () => {
                     onChange={(e) => setUpdaTEData({ ...updateData, address: e.target.value })}
                   ></textarea>
                 </div>
+                <div className="col-lg-12 inputs">
+                  <label htmlFor="exampleInputCity" className="form-label">City:</label>
+                  <select
+                    id="exampleInputCity"
+                    className="form-control"
+                    value={data.city}
+                    onChange={(e) => setUpdaTEData({ ...updateData, city: e.target.value })}
+                  >
+                    {cityOptions.map((option) => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
+                  </select>
+                </div>
                 <div className="col-lg-12">
                   <label htmlFor="exampleInputEmail1" className="form-label">Phone</label>
                   <input type="text" value={updateData.phone} onChange={(e) => setUpdaTEData({ ...updateData, phone: e.target.value })} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Phone Number' />
@@ -336,10 +362,6 @@ const Form = () => {
                 <div className="col-lg-12 inputs">
                   <label htmlFor="exampleInputPrice" className="form-label">Price:</label>
                   <input type="number" value={updateData.price} onChange={(e) => setUpdaTEData({ ...updateData, price: e.target.value })} className="form-control" id="exampleInputPrice" required placeholder="Enter price" />
-                </div>
-                <div className="col-lg-12 inputs">
-                  <label htmlFor="exampleInputPrice" className="form-label">Parking Space:</label>
-                  <input type="number" value={updateData.parkingSpace} onChange={(e) => setUpdaTEData({ ...updateData, parkingSpace: e.target.value })} className="form-control" id="exampleInputPrice" required placeholder="Parking space" />
                 </div>
                 <div className="col-lg-12 inputs">
                   <label htmlFor="exampleInputPrice" className="form-label">Parking Space:</label>
