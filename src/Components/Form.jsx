@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import BG from '../Images/BG.jpg'
+import BG from '../Images/BG3.jpg'
 const Form = () => {
   const [getList, setGetList] = useState([])
   const [serviceTypeOptions] = useState(["Meraige Hall", "Food", "Photography"]);
@@ -126,9 +128,9 @@ const Form = () => {
   };
   return (
     <>
-      <div>
+      <div className="form-container" style={{ backgroundImage: `url(${BG})` }}>
         <ToastContainer />
-        <h3 className='Heading'>Admin Data</h3>
+        <h3 className='Heading'> Register Your Services</h3>
         <div className='Inputs-table '>
           <div className="col-lg-4 inputs">
             <label htmlFor="exampleInputEmail1" className="form-label">Name:</label>

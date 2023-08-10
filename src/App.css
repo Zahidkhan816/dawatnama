@@ -277,3 +277,69 @@ body {
   border-radius: 5px;
   margin: 0 5px;
 }
+
+/* Form.css */
+
+.form-container {
+  font-weight: bold;
+  background-size: cover; /* Scale the background image to cover the entire container */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  /* min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; */
+}
+
+/* Additional responsive styles can be added here */
+/* Components/Login.css */
+/* Components/Login.css */
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-inputs {
+  margin-bottom: 20px;
+}
+
+.login-inputs input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-inputs input[type="password"] {
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation for fade in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

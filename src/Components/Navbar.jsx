@@ -4,8 +4,8 @@ import logo from '../Images/logopng.png'
 const Navbar = () => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg navbar-light text-light ">
+                <div className="container-fluid" >
                     <Link className="navbar-brand" to="home">
                         <img src={logo} alt="" style={{width:"3rem" , height:"3rem" , borderRadius:"10rem"}} />
                     </Link>
@@ -14,7 +14,7 @@ const Navbar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            <li className="nav-item" >
                                 <Link className="nav-link active" to="home" aria-current="page" href="#">Home</Link>
                             </li>
                             <li className="nav-item">
